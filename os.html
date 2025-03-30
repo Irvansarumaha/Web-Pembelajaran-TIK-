@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengertian Sistem Operasi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+            opacity: 0;
+            animation: fadeIn 1.5s forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .container:hover {
+            transform: scale(1.02);
+        }
+        h1 {
+            color: #ff5733;
+            font-size: 28px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            opacity: 0;
+            animation: fadeInText 1.5s forwards 0.5s;
+        }
+        p {
+            text-align: justify;
+            line-height: 1.8;
+            color: #444;
+            font-size: 16px;
+            opacity: 0;
+            animation: fadeInText 1.5s forwards;
+        }
+        @keyframes fadeInText {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 18px;
+            text-decoration: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.2s;
+            opacity: 0;
+            animation: fadeInText 1.5s forwards 2s;
+        }
+        .back-link:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        .os-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .os-item {
+            background-color: #f0f0f0;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #007bff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .os-item:hover {
+            transform: scale(1.1);
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pengertian Sistem Operasi</h1>
+        <p>
+            Sistem operasi (SO) adalah perangkat lunak yang berfungsi untuk mengelola dan mengatur perangkat keras (hardware) serta perangkat lunak (software) di dalam sebuah komputer atau perangkat elektronik. Sistem operasi bertanggung jawab untuk mengontrol dan menyediakan antarmuka antara pengguna dengan perangkat keras, sehingga pengguna dapat menjalankan aplikasi dan berinteraksi dengan komputer.
+        </p>
+        <p>
+            Sistem operasi juga mengelola sumber daya komputer, seperti memori, prosesor, dan perangkat penyimpanan, untuk memastikan semua aplikasi berjalan dengan efisien dan tidak saling bertabrakan. Tanpa sistem operasi, perangkat keras tidak dapat berfungsi dengan baik dan aplikasi tidak dapat dijalankan.
+        </p>
+        <p>
+            Contoh sistem operasi yang umum digunakan antara lain:
+        </p>
+        <div class="os-list">
+            <div class="os-item">Windows (Microsoft)</div>
+            <div class="os-item">macOS (Apple)</div>
+            <div class="os-item">Linux</div>
+            <div class="os-item">Android</div>
+            <div class="os-item">iOS</div>
+        </div>
+        <p>
+            Secara keseluruhan, sistem operasi memainkan peran penting dalam menjembatani komunikasi antara pengguna dan perangkat keras komputer, serta mengelola sumber daya agar komputer dapat bekerja secara optimal.
+        </p>
+        <a href="materi.html" class="back-link">⬅ Kembali ke Materi</a>
+    </div>
+</body>
+</html>

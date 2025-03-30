@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ujian TIK dan Pemrograman</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #8e44ad, #2ecc71);
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 80%;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #9c27b0;
+            font-size: 28px;
+        }
+
+        .quiz-container {
+            margin-top: 20px;
+            user-select: none; /* Prevent text selection */
+            min-height: 100px;
+            position: relative;
+        }
+
+        .option {
+            display: block;
+            background-color: #6a1b9a;
+            color: white;
+            padding: 12px;
+            margin: 5px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .option:hover {
+            background-color: #4a148c;
+        }
+
+        #result {
+            display: none;
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #9c27b0;
+        }
+
+        .btn {
+            background-color: #9c27b0;
+            color: white;
+            padding: 12px 20px;
+            margin: 10px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #7b1fa2;
+        }
+
+        #timer {
+            font-size: 20px;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ujian TIK dan Pemrograman</h1>
+        <div id="timer"></div>
+        <div class="quiz-container" id="quiz-container"></div>
+        <div id="result">
+            <h2>Hasil Ujian</h2>
+            <p id="score"></p>
+            <button class="btn" onclick="location.reload()">Coba Lagi</button>
+            <button class="btn" onclick="window.location.href='materi.html'">Kembali ke Materi</button>
+        </div>
+    </div>
+
+    <script>
+        const questions = [
+            { text: "Siapakah yang dianggap sebagai bapak komputer?", options: ["Charles Babbage", "Alan Turing", "Bill Gates"], answer: "Charles Babbage" },
+            { text: "Apa itu perangkat keras (hardware)?", options: ["Perangkat fisik yang digunakan dalam komputer", "Program atau aplikasi komputer", "Sistem operasi komputer"], answer: "Perangkat fisik yang digunakan dalam komputer" },
+            { text: "Apa fungsi dari sistem operasi dalam komputer?", options: ["Mengatur perangkat keras dan perangkat lunak", "Menjalankan aplikasi", "Menjaga keamanan data"], answer: "Mengatur perangkat keras dan perangkat lunak" },
+            { text: "Apa itu malware?", options: ["Perangkat keras", "Program berbahaya yang merusak sistem", "Sistem operasi"], answer: "Program berbahaya yang merusak sistem" },
+            { text: "Bahasa pemrograman apa yang digunakan untuk pengembangan web?", options: ["JavaScript", "Java", "C++"], answer: "JavaScript" },
+            { text: "Apa kepanjangan dari HTML?", options: ["Hyper Text Markup Language", "Hyperlink Text Markup Language", "High Tech Markup Language"], answer: "Hyper Text Markup Language" },
+            { text: "Untuk apa CSS digunakan?", options: ["Mengatur struktur halaman", "Mengatur tampilan dan desain halaman web", "Membuat interaktivitas pada web"], answer: "Mengatur tampilan dan desain halaman web" },
+            { text: "Apa itu PHP?", options: ["Bahasa pemrograman server-side", "Bahasa markup untuk web", "Sistem operasi"], answer: "Bahasa pemrograman server-side" },
+            { text: "Bahasa pemrograman apa yang digunakan untuk membuat aplikasi Android?", options: ["Java", "C#", "Swift"], answer: "Java" },
+            { text: "Apa itu Python?", options: ["Bahasa pemrograman yang mudah dipelajari", "Sistem operasi", "Perangkat keras"], answer: "Bahasa pemrograman yang mudah dipelajari" },
+            { text: "Apa tujuan dari JavaScript?", options: ["Membuat halaman statis", "Menambah interaktivitas pada halaman web", "Mengelola database"], answer: "Menambah interaktivitas pada halaman web" },
+            { text: "Apa itu SQL?", options: ["Structured Query Language", "Simple Query Language", "System Query Language"], answer: "Structured Query Language" },
+            { text: "Bahasa pemrograman mana yang dikenal dengan prinsip OOP?", options: ["Java", "C", "Python"], answer: "Java" },
+            { text: "Bahasa pemrograman apa yang digunakan untuk pengembangan aplikasi iOS?", options: ["Swift", "Java", "C#"], answer: "Swift" },
+            { text: "Apa yang dimaksud dengan C++?", options: ["Bahasa pemrograman untuk pengembangan aplikasi desktop", "Perangkat keras untuk komputer", "Jenis sistem operasi"], answer: "Bahasa pemrograman untuk pengembangan aplikasi desktop" },
+            { text: "Apa itu cloud computing?", options: ["Komputasi yang menggunakan server di internet", "Perangkat keras untuk komputer", "Bahasa pemrograman"], answer: "Komputasi yang menggunakan server di internet" },
+            { text: "Siapa yang menciptakan bahasa pemrograman C++?", options: ["Bjarne Stroustrup", "James Gosling", "Dennis Ritchie"], answer: "Bjarne Stroustrup" },
+            { text: "Apa itu JavaScript?", options: ["Bahasa pemrograman untuk pengembangan web", "Bahasa pemrograman untuk pengolahan data", "Sistem operasi"], answer: "Bahasa pemrograman untuk pengembangan web" },
+            { text: "Sistem operasi mana yang open-source?", options: ["Linux", "Windows", "Mac OS"], answer: "Linux" },
+            { text: "Apa itu virtualisasi?", options: ["Teknologi yang memungkinkan pembuatan beberapa sistem operasi dalam satu mesin fisik", "Sistem operasi untuk server", "Jenis perangkat keras"], answer: "Teknologi yang memungkinkan pembuatan beberapa sistem operasi dalam satu mesin fisik" },
+            { text: "Bahasa pemrograman mana yang paling sering digunakan dalam pengembangan aplikasi web?", options: ["JavaScript", "Java", "Swift"], answer: "JavaScript" },
+            { text: "Apa yang dimaksud dengan protokol jaringan?", options: ["Aturan komunikasi dalam jaringan komputer", "Jenis perangkat keras jaringan", "Bahasa pemrograman"], answer: "Aturan komunikasi dalam jaringan komputer" },
+            { text: "Apa yang dimaksud dengan API?", options: ["Application Programming Interface", "Application Process Integration", "Automated Programming Interface"], answer: "Application Programming Interface" },
+            { text: "Apa tujuan dari menggunakan Git?", options: ["Sistem kontrol versi", "Mengatur tampilan halaman", "Mengoptimalkan kecepatan komputer"], answer: "Sistem kontrol versi" },
+            { text: "Apa yang dimaksud dengan DNS?", options: ["Domain Name System", "Data Network Service", "Dynamic Network System"], answer: "Domain Name System" },
+            { text: "Apa yang dimaksud dengan server?", options: ["Perangkat keras yang menyediakan layanan di jaringan", "Jenis bahasa pemrograman", "Perangkat lunak untuk mengakses data"], answer: "Perangkat keras yang menyediakan layanan di jaringan" },
+            { text: "Apa itu hacking?", options: ["Aksi mencoba mengakses sistem secara tidak sah", "Perangkat untuk meningkatkan kecepatan komputer", "Bahasa pemrograman untuk aplikasi mobile"], answer: "Aksi mencoba mengakses sistem secara tidak sah" },
+            { text: "Apa yang dimaksud dengan Java?", options: ["Bahasa pemrograman berorientasi objek", "Sistem operasi untuk server", "Perangkat keras komputer"], answer: "Bahasa pemrograman berorientasi objek" }
+        ];
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let timeRemaining = 300; // 5 menit dalam detik
+        const quizContainer = document.getElementById("quiz-container");
+        const timerDisplay = document.getElementById("timer");
+
+        function startTimer() {
+            const interval = setInterval(function() {
+                timeRemaining--;
+                let minutes = Math.floor(timeRemaining / 60);
+                let seconds = timeRemaining % 60;
+                timerDisplay.textContent = `Waktu Tersisa: ${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+
+                if (timeRemaining <= 0) {
+                    clearInterval(interval);
+                    showResult();
+                }
+            }, 1000);
+        }
+
+        function showQuestion() {
+            const q = questions[currentQuestionIndex];
+            quizContainer.innerHTML = `<h2>${currentQuestionIndex + 1}. ${q.text}</h2>`;
+            q.options.forEach(option => {
+                quizContainer.innerHTML += `<div class='option' onclick='selectAnswer("${option}")'>${option}</div>`;
+            });
+        }
+
+        function selectAnswer(selected) {
+            if (selected === questions[currentQuestionIndex].answer) {
+                score++;
+            }
+            currentQuestionIndex++;
+            if (currentQuestionIndex < questions.length) {
+                showQuestion();
+            } else {
+                showResult();
+            }
+        }
+
+        function showResult() {
+            quizContainer.style.display = "none";
+            document.getElementById("result").style.display = "block";
+            document.getElementById("score").textContent = `Skor Anda: ${score} dari ${questions.length}`;
+        }
+
+        // Disable right-click and copy-paste
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
+        document.addEventListener('selectstart', (e) => e.preventDefault());
+
+        startTimer();
+        showQuestion();
+    </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengertian Keamanan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #00bcd4, #009688); /* Menggunakan satu warna gradien */
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            animation: fadeIn 1.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .container:hover {
+            transform: scale(1.02);
+        }
+
+        h1 {
+            color: #ff5733;
+            font-size: 28px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            opacity: 0;
+            animation: fadeInText 1.5s forwards 0.5s;
+        }
+
+        p {
+            text-align: justify;
+            line-height: 1.8;
+            color: #444;
+            font-size: 16px;
+            opacity: 0;
+            animation: fadeInText 1.5s forwards;
+        }
+
+        @keyframes fadeInText {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 18px;
+            text-decoration: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.2s;
+            opacity: 1; /* Menjamin tombol selalu terlihat */
+            animation: fadeInText 1.5s forwards 2s;
+        }
+
+        .back-link:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pengertian Keamanan</h1>
+        <p>
+            Keamanan adalah upaya untuk melindungi sesuatu dari ancaman atau bahaya yang dapat menyebabkan kerusakan atau kerugian. Dalam konteks teknologi informasi, keamanan merujuk pada perlindungan terhadap data, sistem, dan perangkat dari akses, penggunaan, atau modifikasi yang tidak sah.
+        </p>
+        <p>
+            Keamanan informasi terdiri dari beberapa aspek utama, yaitu:
+        </p>
+        <ul style="text-align: left; margin-left: 20px;">
+            <li><strong>Kerahasiaan (Confidentiality)</strong>: Menjamin bahwa informasi hanya dapat diakses oleh pihak yang berwenang.</li>
+            <li><strong>Integritas (Integrity)</strong>: Menjaga agar data tidak diubah tanpa izin yang sah.</li>
+            <li><strong>Ketersediaan (Availability)</strong>: Memastikan bahwa informasi dan sistem tersedia untuk pengguna yang berwenang saat dibutuhkan.</li>
+        </ul>
+        <p>
+            Untuk menjaga keamanan, berbagai langkah dapat dilakukan, seperti penggunaan kata sandi yang kuat, enkripsi data, serta pembaruan perangkat lunak secara rutin. Keamanan juga melibatkan perlindungan terhadap ancaman fisik dan serangan dunia maya, seperti peretasan, malware, dan pencurian identitas.
+        </p>
+        <p>
+            Secara keseluruhan, keamanan memainkan peran yang sangat penting dalam dunia digital, baik untuk individu, organisasi, maupun pemerintah, untuk melindungi informasi yang bernilai dan menjaga privasi serta kepercayaan pengguna.
+        </p>
+        <a href="materi.html" class="back-link">⬅ Kembali ke Materi</a>
+    </div>
+</body>
+</html>

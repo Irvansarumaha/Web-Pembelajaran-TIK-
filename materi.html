@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi Pembelajaran TIK</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #f3e5f5, #e1bee7);
+            text-align: center;
+        }
+        .container {
+            max-width: 90%;
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #6a1b9a;
+            font-weight: bold;
+        }
+        .menu {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .menu a {
+            display: inline-block;
+            padding: 15px 20px;
+            text-decoration: none;
+            background-color: #8e24aa;
+            color: white;
+            border-radius: 8px;
+            flex: 1 1 calc(25% - 15px);
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .menu a:hover {
+            background-color: #6a1b9a;
+            transform: scale(1.05);
+        }
+        @media (max-width: 768px) {
+            .menu a {
+                flex: 1 1 calc(50% - 15px);
+                font-size: 14px;
+                padding: 12px;
+            }
+        }
+        @media (max-width: 480px) {
+            .menu a {
+                flex: 1 1 100%;
+                font-size: 14px;
+                padding: 12px;
+            }
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: #8e24aa;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .back-link:hover {
+            background: #6a1b9a;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Materi Teknologi Informatika dan Komputer</h1>
+        <div class="menu">
+            <a href="sejarah.html">Sejarah TIK</a>
+            <a href="hardware.html">Hardware & Software</a>
+            <a href="os.html">Sistem Operasi</a>
+            <a href="keamanan.html">Keamanan</a>
+        </div>
+        
+        <h1>Materi Pemrograman</h1>
+        <div class="menu">
+            <a href="html.html">HTML</a>
+            <a href="css.html">CSS</a>
+            <a href="javascript.html">JavaScript</a>
+            <a href="php.html">PHP</a>
+            <a href="python.html">Python</a>
+            <a href="java.html">Java</a>
+            <a href="cplus.html">C++</a>
+            <a href="sql.html">SQL</a>
+        </div>
+        <a class="back-link" href="dashboard.html">⬅ Kembali ke Dashboard</a>
+    </div>
+</body>
+</html>

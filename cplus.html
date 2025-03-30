@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengertian C++</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #673ab7, #2196f3); /* Gradasi warna biru dan ungu */
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            animation: fadeIn 1.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            color: #f44336;
+            font-size: 28px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            opacity: 0;
+            animation: fadeInText 1.5s forwards 0.5s;
+        }
+
+        p {
+            text-align: justify;
+            line-height: 1.8;
+            color: #444;
+            font-size: 16px;
+            opacity: 0;
+            animation: fadeInText 1.5s forwards;
+        }
+
+        @keyframes fadeInText {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 18px;
+            text-decoration: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.2s;
+            opacity: 1;
+            animation: fadeInText 1.5s forwards 2s;
+        }
+
+        .back-link:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        pre {
+            text-align: left;
+            font-size: 14px;
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px auto;
+            width: 90%;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        code {
+            display: block;
+            padding: 10px;
+            font-family: Consolas, 'Courier New', monospace;
+            color: #333;
+            background: #f4f4f4;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pengertian C++</h1>
+        <p>
+            C++ adalah bahasa pemrograman yang dikembangkan oleh Bjarne Stroustrup pada tahun 1979 sebagai pengembangan dari bahasa C. C++ mendukung paradigma pemrograman berorientasi objek (OOP) serta pemrograman prosedural. C++ banyak digunakan untuk pengembangan perangkat lunak yang membutuhkan performa tinggi seperti aplikasi desktop, game, serta sistem operasi.
+        </p>
+        <p>
+            C++ memberikan kontrol yang lebih besar terhadap sistem dibandingkan dengan bahasa pemrograman tingkat tinggi lainnya, dan juga memungkinkan pengembang untuk mengelola memori secara langsung, yang merupakan kelebihan utama dari bahasa ini.
+        </p>
+
+        <h2>Contoh Program C++</h2>
+        <pre>
+            <code>
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Menampilkan pesan
+    cout << "Hello Matius!" << endl;
+    return 0;
+}
+            </code>
+        </pre>
+
+        <p><strong>Penjelasan Program:</strong></p>
+        <ul style="text-align: left; margin-left: 20px;">
+            <li><strong>#include &lt;iostream&gt;:</strong> Menyertakan library untuk input dan output.</li>
+            <li><strong>using namespace std;</strong> Menggunakan namespace standar untuk memudahkan pemrograman.</li>
+            <li><strong>cout &lt;&lt; "Hello Matius!" &lt;&lt; endl;</strong> Menampilkan pesan "Hello Matius!" ke layar.</li>
+            <li><strong>return 0;</strong> Menandakan bahwa program selesai dijalankan tanpa error.</li>
+        </ul>
+
+        <p>
+            Program di atas merupakan contoh dasar dalam C++ yang hanya menampilkan pesan "Hello Matius!" di layar.
+        </p>
+
+        <a href="materi.html" class="back-link">⬅ Kembali ke Materi</a>
+    </div>
+</body>
+</html>

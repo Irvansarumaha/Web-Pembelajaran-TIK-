@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengertian Java</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #ff9800, #ff5722);
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            animation: fadeIn 1.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            color: #f44336;
+            font-size: 28px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            opacity: 0;
+            animation: fadeInText 1.5s forwards 0.5s;
+        }
+
+        p {
+            text-align: justify;
+            line-height: 1.8;
+            color: #444;
+            font-size: 16px;
+            opacity: 0;
+            animation: fadeInText 1.5s forwards;
+        }
+
+        @keyframes fadeInText {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 18px;
+            text-decoration: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.2s;
+            opacity: 1;
+            animation: fadeInText 1.5s forwards 2s;
+        }
+
+        .back-link:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        pre {
+            text-align: left;
+            font-size: 14px;
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px auto;
+            width: 90%;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        code {
+            display: block;
+            padding: 10px;
+            font-family: Consolas, 'Courier New', monospace;
+            color: #333;
+            background: #f4f4f4;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pengertian Java</h1>
+        <p>
+            Java adalah bahasa pemrograman tingkat tinggi yang sangat populer dan banyak digunakan dalam pengembangan aplikasi berbasis objek. Java pertama kali diperkenalkan oleh Sun Microsystems pada tahun 1995 dan sejak saat itu menjadi salah satu bahasa pemrograman yang paling banyak digunakan di dunia. Java dikenal dengan prinsip "Write Once, Run Anywhere" (WORA), yang berarti kode Java dapat dijalankan di berbagai platform tanpa perlu modifikasi.
+        </p>
+        <p>
+            Java banyak digunakan untuk pengembangan aplikasi web, aplikasi desktop, serta aplikasi mobile untuk platform Android. Java mendukung pemrograman berorientasi objek (OOP), yang memungkinkan pengembang untuk membuat aplikasi yang lebih modular dan mudah dipelihara.
+        </p>
+
+        <h2>Contoh Program Java</h2>
+        <pre>
+            <code>
+                // Program Java sederhana untuk menampilkan pesan
+                public class HelloWorld {
+                    public static void main(String[] args) {
+                        System.out.println("Hello, Dunia!");
+                    }
+                }
+            </code>
+        </pre>
+
+        <p><strong>Penjelasan Program:</strong></p>
+        <ul style="text-align: left; margin-left: 20px;">
+            <li><strong>public class HelloWorld:</strong> Mendefinisikan kelas dengan nama HelloWorld.</li>
+            <li><strong>public static void main(String[] args):</strong> Merupakan metode utama (main) tempat eksekusi program dimulai.</li>
+            <li><strong>System.out.println("Hello, Dunia!");</strong> Digunakan untuk menampilkan teks "Hello, Dunia!" di layar.</li>
+        </ul>
+
+        <p>
+            Program di atas merupakan contoh paling dasar dalam Java yang hanya menampilkan pesan "Hello, Dunia!" di layar.
+        </p>
+
+        <a href="materi.html" class="back-link">⬅ Kembali ke Materi</a>
+    </div>
+</body>
+</html>

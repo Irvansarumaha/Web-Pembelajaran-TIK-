@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengertian CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #42a5f5, #2196f3);
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            animation: fadeIn 1.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            color: #ff5733;
+            font-size: 28px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            opacity: 0;
+            animation: fadeInText 1.5s forwards 0.5s;
+        }
+
+        p {
+            text-align: justify;
+            line-height: 1.8;
+            color: #444;
+            font-size: 16px;
+            opacity: 0;
+            animation: fadeInText 1.5s forwards;
+        }
+
+        @keyframes fadeInText {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 18px;
+            text-decoration: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.2s;
+            opacity: 1;
+            animation: fadeInText 1.5s forwards 2s;
+        }
+
+        .back-link:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        pre {
+            text-align: left;
+            font-size: 14px;
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px auto;
+            width: 90%;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        code {
+            display: block;
+            padding: 10px;
+            font-family: Consolas, 'Courier New', monospace;
+            color: #333;
+            background: #f4f4f4;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pengertian CSS</h1>
+        <p>
+            CSS (Cascading Style Sheets) adalah bahasa yang digunakan untuk mendesain dan mengatur tampilan atau layout halaman web yang dibangun dengan HTML. CSS memungkinkan kita untuk mengontrol warna, font, spasi, ukuran elemen, dan berbagai aspek visual lainnya dalam halaman web.
+        </p>
+        <p>
+            CSS dapat diterapkan secara internal dalam HTML menggunakan tag <code>&lt;style&gt;</code>, atau dapat dipisahkan dalam file eksternal dengan ekstensi <code>.css</code>. CSS membantu pengembang web memisahkan struktur (HTML) dan tampilan (CSS) untuk membuat kode lebih bersih dan terorganisir.
+        </p>
+
+        <h2>Contoh Program CSS</h2>
+        <pre>
+            <code>
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="id"&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;title&gt;Contoh CSS&lt;/title&gt;
+                    &lt;style&gt;
+                        body {
+                            font-family: Arial, sans-serif;
+                            background-color: #f0f0f0;
+                        }
+                        h1 {
+                            color: #ff5722;
+                        }
+                        p {
+                            color: #333;
+                            font-size: 18px;
+                        }
+                    &lt;/style&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;h1&gt;Selamat Datang di Halaman CSS!&lt;/h1&gt;
+                    &lt;p&gt;Ini adalah halaman yang menggunakan CSS untuk penataan.&lt;/p&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+        </pre>
+
+        <p><strong>Penjelasan Program:</strong></p>
+        <ul style="text-align: left; margin-left: 20px;">
+            <li><strong>&lt;style&gt;:</strong> Digunakan untuk menulis kode CSS secara internal dalam halaman HTML.</li>
+            <li><strong>body { font-family: Arial, sans-serif; }:</strong> Menentukan font yang digunakan untuk seluruh halaman.</li>
+            <li><strong>h1 { color: #ff5722; }:</strong> Mengubah warna teks judul menjadi oranye.</li>
+            <li><strong>p { color: #333; font-size: 18px; }:</strong> Mengatur warna teks paragraf dan ukuran font-nya.</li>
+        </ul>
+
+        <p>
+            Program di atas menampilkan halaman dengan teks yang sudah diberi gaya menggunakan CSS. Bagian <code>h1</code> akan berwarna oranye, dan teks paragraf akan berwarna abu-abu gelap dengan ukuran font 18px.
+        </p>
+
+        <a href="materi.html" class="back-link">⬅ Kembali ke Materi</a>
+    </div>
+</body>
+</html>

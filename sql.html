@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengertian SQL</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #8e24aa, #ff4081); /* Gradasi warna pink dan ungu */
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            animation: fadeIn 1.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            color: #f44336;
+            font-size: 28px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            opacity: 0;
+            animation: fadeInText 1.5s forwards 0.5s;
+        }
+
+        p {
+            text-align: justify;
+            line-height: 1.8;
+            color: #444;
+            font-size: 16px;
+            opacity: 0;
+            animation: fadeInText 1.5s forwards;
+        }
+
+        @keyframes fadeInText {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 18px;
+            text-decoration: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.2s;
+            opacity: 1;
+            animation: fadeInText 1.5s forwards 2s;
+        }
+
+        .back-link:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        pre {
+            text-align: left;
+            font-size: 14px;
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px auto;
+            width: 90%;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        code {
+            display: block;
+            padding: 10px;
+            font-family: Consolas, 'Courier New', monospace;
+            color: #333;
+            background: #f4f4f4;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pengertian SQL</h1>
+        <p>
+            SQL (Structured Query Language) adalah bahasa yang digunakan untuk mengelola dan mengakses data dalam sistem manajemen basis data relasional (RDBMS). SQL memungkinkan pengguna untuk melakukan operasi seperti memasukkan data, memperbarui data, menghapus data, dan mengambil data dari basis data.
+        </p>
+        <p>
+            SQL merupakan standar industri yang digunakan oleh banyak sistem manajemen basis data seperti MySQL, PostgreSQL, SQL Server, dan Oracle. Dengan SQL, pengembang dapat melakukan operasi basis data dengan cara yang efisien dan terstruktur.
+        </p>
+
+        <h2>Contoh Query SQL</h2>
+        <pre>
+            <code>
+-- Membuat tabel
+CREATE TABLE Mahasiswa (
+    id INT PRIMARY KEY,
+    nama VARCHAR(100),
+    umur INT
+);
+
+-- Menambahkan data
+INSERT INTO Mahasiswa (id, nama, umur) VALUES (1, 'Matius', 19);
+
+-- Mengambil data
+SELECT * FROM Mahasiswa;
+            </code>
+        </pre>
+
+        <p><strong>Penjelasan Query:</strong></p>
+        <ul style="text-align: left; margin-left: 20px;">
+            <li><strong>CREATE TABLE Mahasiswa:</strong> Membuat tabel baru dengan nama Mahasiswa.</li>
+            <li><strong>INSERT INTO Mahasiswa:</strong> Menambahkan data mahasiswa ke dalam tabel Mahasiswa.</li>
+            <li><strong>SELECT * FROM Mahasiswa:</strong> Mengambil semua data yang ada dalam tabel Mahasiswa.</li>
+        </ul>
+
+        <p>
+            Contoh di atas menunjukkan bagaimana membuat tabel, memasukkan data, dan mengambil data dari sebuah tabel menggunakan SQL.
+        </p>
+
+        <a href="materi.html" class="back-link">⬅ Kembali ke Materi</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Pembelajaran TIK</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #f3e5f5, #e1bee7);
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #6a1b9a;
+            font-weight: bold;
+        }
+        .menu {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .menu a {
+            display: inline-block;
+            padding: 12px 25px;
+            text-decoration: none;
+            background-color: #8e24aa;
+            color: white;
+            border-radius: 8px;
+            width: 220px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .menu a:hover {
+            background-color: #6a1b9a;
+            transform: scale(1.05);
+        }
+        @media (max-width: 600px) {
+            .menu {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Selamat Datang di Pembelajaran TIK</h1>
+        <p>Pilih menu di bawah untuk melanjutkan:</p>
+        <div class="menu">
+            <a href="materi.html">📖 Materi Pembelajaran</a>
+            <a href="quiz.html">📝 Mulai Quiz</a>
+        </div>
+    </div>
+</body>
+</html>

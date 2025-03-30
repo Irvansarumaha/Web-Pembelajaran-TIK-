@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #4caf50, #8bc34a);
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            animation: fadeIn 1.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .container:hover {
+            transform: scale(1.02);
+        }
+
+        h1 {
+            color: #ff5733;
+            font-size: 28px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            opacity: 0;
+            animation: fadeInText 1.5s forwards 0.5s;
+        }
+
+        p {
+            text-align: justify;
+            line-height: 1.8;
+            color: #444;
+            font-size: 16px;
+            opacity: 0;
+            animation: fadeInText 1.5s forwards;
+        }
+
+        @keyframes fadeInText {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 18px;
+            text-decoration: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.2s;
+            opacity: 1;
+            animation: fadeInText 1.5s forwards 2s;
+        }
+
+        .back-link:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        pre {
+            text-align: left;
+            font-size: 14px;
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px auto;
+            width: 90%;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        code {
+            display: block;
+            padding: 10px;
+            font-family: Consolas, 'Courier New', monospace;
+            color: #333;
+            background: #f4f4f4;
+            border-radius: 5px;
+        }
+
+    
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 24px;
+            }
+            .container {
+                padding: 15px;
+            }
+            .back-link {
+                padding: 10px 14px;
+            }
+            p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pengertian HTML</h1>
+        <p>
+            HTML (HyperText Markup Language) adalah bahasa markup yang digunakan untuk membuat dan menyusun halaman web. HTML memberikan struktur dasar untuk konten di situs web, seperti teks, gambar, tabel, dan elemen-elemen lainnya. HTML menggunakan tag-tag untuk menandai bagian-bagian dari konten yang ingin ditampilkan di web. Setiap tag HTML memiliki fungsi tertentu, seperti menampilkan teks, menambahkan gambar, atau membuat tautan antar halaman.
+        </p>
+        <p>
+            HTML adalah dasar dari pengembangan web dan bekerja bersama CSS (Cascading Style Sheets) dan JavaScript untuk mempercantik dan menambah interaktivitas pada halaman web.
+        </p>
+
+        <h2>Contoh Program HTML</h2>
+        <pre>
+            <code>
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="id"&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;title&gt;Contoh HTML&lt;/title&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;h1&gt;Selamat Datang!&lt;/h1&gt;
+                    &lt;p&gt;Ini adalah halaman web pertama saya.&lt;/p&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+        </pre>
+
+        <p><strong>Penjelasan:</strong></p>
+        <ul style="text-align: left; margin-left: 20px;">
+            <li><strong>&lt;h1&gt;:</strong> Judul utama halaman.</li>
+            <li><strong>&lt;p&gt;:</strong> Paragraf teks yang menjelaskan konten halaman.</li>
+        </ul>
+        <p>
+            Program di atas akan menampilkan halaman dengan judul dan deskripsi singkat di bawahnya, yaitu "Ini adalah halaman web pertama saya."
+        </p>
+
+        <a href="materi.html" class="back-link">⬅ Kembali ke Materi</a>
+    </div>
+</body>
+</html>
